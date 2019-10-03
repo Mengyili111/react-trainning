@@ -37,7 +37,7 @@ class Nav extends Component {
     this.state = {
       isMobile: false,
       visible: false,
-      placement: 'top',
+      placement: 'right',
       current: null,
       menuCurrent: '',
       login: false,
@@ -430,11 +430,11 @@ class Nav extends Component {
                 <Icon type="ordered-list" /> 文章
               </Link>
             </p>
-            <p onClick={this.onClose}>
+            {/* <p onClick={this.onClose}>
               <Link to="/hot">
                 <Icon type="fire" onClick={this.showLoginModal} /> 热门
               </Link>
-            </p>
+            </p> */}
             <p onClick={this.onClose}>
               <Link to="/archive">
                 <Icon type="project" onClick={this.showLoginModal} /> 归档
@@ -445,21 +445,21 @@ class Nav extends Component {
                 <Icon type="project" onClick={this.showLoginModal} /> 技术栈
               </Link>
             </p>
-            <p onClick={this.onClose}>
+            {/* <p onClick={this.onClose}>
               <Link to="/timeLine">
                 <Icon type="hourglass" onClick={this.showLoginModal} /> 历程
               </Link>
-            </p>
+            </p> */}
             <p onClick={this.onClose}>
               <Link to="/message">
                 <Icon type="message" onClick={this.showLoginModal} /> 留言
               </Link>
             </p>
-            <p onClick={this.onClose}>
+            {/* <p onClick={this.onClose}>
               <Link to="/about">
                 <Icon type="user" onClick={this.showLoginModal} /> 关于
               </Link>
-            </p>
+            </p> */}
 
             {userInfo ? (
               <div onClick={this.handleLogout}>
