@@ -417,7 +417,8 @@ class Nav extends Component {
           closable={false}
           onClose={this.onClose}
           visible={this.state.visible}
-          height={420}
+          height={300}
+          width={180}
         >
           <div className="drawer">
             <p onClick={this.onClose}>
