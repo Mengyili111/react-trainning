@@ -1,6 +1,6 @@
 import './index.less';
 import logo from '../../assets/UserLogo.jpeg';
-import BiaoChenXuYing from '../../assets/BiaoChenXuYing.png';
+import wechat from '../../assets/wechat.png';
 import React, { Component } from 'react';
 import { Avatar, message } from 'antd';
 import { Link } from 'react-router-dom';
@@ -126,13 +126,13 @@ class SliderRight extends Component {
           {/* <div className="footer">{linkChildren}</div> */}
         </div>
         <div className="tags">
-          <div className="title">标签云</div>
+          <div className="title">Cloud Tags</div>
           {list}
         </div>
         <div className="introduce">
-          <div className="title">技术学习交流群</div>
+          <div className="title">WeChat Group</div>
           <div className="content">
-            <img style={{'width':'100%'}} src={BiaoChenXuYing} alt="全栈修炼" />
+            <img style={{'width':'100%'}} src={wechat} alt="全栈修炼" />
           </div>
         </div>
       </div>

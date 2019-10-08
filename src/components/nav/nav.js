@@ -307,51 +307,51 @@ class Nav extends Component {
                   <Menu.Item key="9">
                     <Link to="/">
                       <Icon type="home" theme="outlined" />
-                      首页
+                      Home
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="1">
                     <Link to="/articles">
                       <Icon type="ordered-list" theme="outlined" />
-                      文章
+                      Articles
                     </Link>
                   </Menu.Item>
-                  <Menu.Item key="2">
+                  {/* <Menu.Item key="2">
                     <Link to="/hot">
                       <Icon type="fire" theme="outlined" />
                       热门
                     </Link>
-                  </Menu.Item>
+                  </Menu.Item> */}
                   <Menu.Item key="8">
                     <Link to="/archive">
                       <Icon type="project" theme="outlined" />
-                      归档
+                      Archive
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="7">
                     <Link to="/project">
                       <Icon type="database" theme="outlined" />
-                      技术栈
+                      Stacks
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="3">
                     <Link to="/timeLine">
                       <Icon type="hourglass" theme="outlined" />
-                      历程
+                      Roadmap
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="4">
                     <Link to="/message">
                       <Icon type="message" theme="outlined" />
-                      留言
+                      Message
                     </Link>
                   </Menu.Item>
-                  <Menu.Item key="5">
+                  {/* <Menu.Item key="5">
                     <Link to="/about">
                       <Icon type="user" theme="outlined" />
                       关于
                     </Link>
-                  </Menu.Item>
+                  </Menu.Item> */}
                 </Menu>
               </Col>
               <Col
@@ -395,7 +395,7 @@ class Nav extends Component {
                       style={{ marginRight: '15px' }}
                       onClick={this.showLoginModal}
                     >
-                      登 录
+                      Signin
                     </Button>
                     <Button
                       type="danger"
@@ -403,7 +403,7 @@ class Nav extends Component {
                       style={{ marginRight: '15px' }}
                       onClick={this.showRegisterModal}
                     >
-                      注 册
+                      Register
                     </Button>
                   </div>
                 )}
@@ -422,12 +422,12 @@ class Nav extends Component {
           <div className="drawer">
             <p onClick={this.onClose}>
               <Link to="/">
-                <Icon type="home" /> 首页
+                <Icon type="home" /> Home
               </Link>
             </p>
             <p onClick={this.onClose}>
               <Link to="/articles">
-                <Icon type="ordered-list" /> 文章
+                <Icon type="ordered-list" /> Articles
               </Link>
             </p>
             {/* <p onClick={this.onClose}>
@@ -437,12 +437,12 @@ class Nav extends Component {
             </p> */}
             <p onClick={this.onClose}>
               <Link to="/archive">
-                <Icon type="project" onClick={this.showLoginModal} /> 归档
+                <Icon type="project" onClick={this.showLoginModal} /> Archive
               </Link>
             </p>
             <p onClick={this.onClose}>
               <Link to="/project">
-                <Icon type="project" onClick={this.showLoginModal} /> 技术栈
+                <Icon type="project" onClick={this.showLoginModal} /> Stacks
               </Link>
             </p>
             {/* <p onClick={this.onClose}>
@@ -452,7 +452,7 @@ class Nav extends Component {
             </p> */}
             <p onClick={this.onClose}>
               <Link to="/message">
-                <Icon type="message" onClick={this.showLoginModal} /> 留言
+                <Icon type="message" onClick={this.showLoginModal} /> Message
               </Link>
             </p>
             {/* <p onClick={this.onClose}>

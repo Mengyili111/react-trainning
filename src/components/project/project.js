@@ -107,6 +107,8 @@ class Project extends Component {
     return (
       <div className="left">
         <ul className="project">{list}</ul>
+        <p>React+Express+MongoDB</p>
+        <p>JWT+Passport.js for HTTP authentication</p>
         {this.state.isLoading ? <LoadingCom /> : ''}
         {this.state.isLoadEnd ? <LoadEndCom /> : ''}
       </div>

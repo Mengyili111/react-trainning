@@ -1,5 +1,8 @@
 const proxy = require('http-proxy-middleware');
 
+
+// configure proxy to handle CORS
+
 module.exports = function(app) {
   app.use(
     proxy('/api', {
@@ -11,3 +14,5 @@ module.exports = function(app) {
     }),
   );
 };
+
+

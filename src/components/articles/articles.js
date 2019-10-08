@@ -8,7 +8,7 @@ import https from '../../utils/https';
 import urls from '../../utils/urls';
 import LoadingCom from '../loading/loading';
 import LoadEndCom from '../loadEnd/loadEnd';
-import bg from '../../assets/bg.jpg';
+import wechat from '../../assets/wechat.png';
 import {
   throttle,
   getScrollTop,
@@ -18,7 +18,7 @@ import {
   timestampToTime,
 } from '../../utils/utils';
 /*actions*/
-import { saveArticlesList } from '../../store/actions/articles';
+import { saveArticlesList, getArticleList } from '../../store/actions/articles';
 
 // 获取可视区域的高度
 const viewHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -47,7 +47,7 @@ const lazyload = throttle(() => {
 
 @connect(
   state => state.articles,
-  { saveArticlesList },
+  { saveArticlesList,getArticleList },
 )
 class Articles extends Component {
   constructor(props) {
@@ -164,9 +164,21 @@ class Articles extends Component {
       .catch(err => {
         console.error(err);
       });
+
+      this.setState({
+        articlesList: [{
+          _id: '0001',
+          content: 'javascript', 
+          desc:'( For REST API test ) This article helps you to understand what Clouse is in JavaScript',
+          title:'JavaScript Closure',
+          meta: {likes: 1314520, views: 'public', comments: 'I like this article so much'}
+        }]
+      })
   }
 
   render() {
+
+    console.log(this.state.articlesList)
     const list = this.state.articlesList.map((item, i) => (
       <ReactCSSTransitionGroup
         key={item._id}
@@ -180,9 +192,10 @@ class Articles extends Component {
           <a className="wrap-img" href="/" target="_blank">
             <img
               className="img-blur-done"
-              data-src={item.img_url}
+              data-src='https://miro.medium.com/max/3016/0*i1XbVjul86E_CSyf.jpg'
+              // {item.img_url}
               data-has-lazy-src="false"
-              src={bg}
+              src={wechat}
               alt="文章封面"
             />
           </a>
