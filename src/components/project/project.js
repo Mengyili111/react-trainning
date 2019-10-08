@@ -107,8 +107,17 @@ class Project extends Component {
     return (
       <div className="left">
         <ul className="project">{list}</ul>
-        <p>React+Express+MongoDB</p>
-        <p>JWT+Passport.js for HTTP authentication</p>
+        <p>
+        react： ^16.8.4
+        antd： ^3.15.0
+        react-router:：^4.3.1
+        webpack： 4.28.3
+        axios：0.18.0
+        redux: ^4.0.1
+        highlight.js： ^9.15.6
+        marked：^0.6.
+        </p>
+
         {this.state.isLoading ? <LoadingCom /> : ''}
         {this.state.isLoadEnd ? <LoadEndCom /> : ''}
       </div>
