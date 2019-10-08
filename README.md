@@ -1,7 +1,5 @@
 ## 前言
 
-此 blog 项目是基于 react 全家桶 + Ant Design 。
-
 ## 效果
 
 效果图：
@@ -22,7 +20,7 @@
 - [x] 发文（支持 MarkDown 语法）
 - [x] 文章详情展示（支持代码语法高亮）
 - [x] 移动端适配
-- [x] 网站波浪效果(请看 https://biaochenxuying.cn/wave.html)
+- [x] 网站波浪效果
 - [x] 第三方 github 授权登录
 - [x] 文章归档
 - [x] 文章详情的目录

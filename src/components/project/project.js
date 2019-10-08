@@ -45,6 +45,31 @@ class Project extends Component {
     this.setState({
       isLoading: true,
     });
+
+
+    this.setState({list:[{
+      _id: '0001',
+      title: 'React-Redux-Express',
+      start_time: '2019-08-08',
+      end_time: '2020-08-08',
+      img: 'https://miro.medium.com/max/3016/0*i1XbVjul86E_CSyf.jpg',
+      content: <div>
+        <p>react： ^16.8.4</p>
+        <p>redux: ^4.0.1</p>
+        <p>antd： ^3.15.0</p>
+        <p>react-router:：^4.3.1</p>
+        <p>webpack： 4.28.3</p>
+        <p>axios：0.18.0</p>
+        <p>highlight.js： ^9.15.6</p>
+        <p>marked：^0.6.</p>
+        <p>jest: "23.6.0",</p>
+        <p>MongoDB Commnunity Edition </p>
+      </div>,
+      isLoading: false,
+      isLoadEnd: true
+    }]})
+
+
     https
       .get(urls.getProjectList, {
         params: {
@@ -105,19 +130,18 @@ class Project extends Component {
     ));
 
     return (
-      <div className="left">
+      <div className="left" style={{display: 'center'}}>
         <ul className="project">{list}</ul>
-        <p>
-        react： ^16.8.4
-        antd： ^3.15.0
-        react-router:：^4.3.1
-        webpack： 4.28.3
-        axios：0.18.0
-        redux: ^4.0.1
-        highlight.js： ^9.15.6
-        marked：^0.6.
-        </p>
-
+        {/* <p>react： ^16.8.4</p>
+        <p>redux: ^4.0.1</p>
+        <p>antd： ^3.15.0</p>
+        <p>react-router:：^4.3.1</p>
+        <p>webpack： 4.28.3</p>
+        <p>axios：0.18.0</p>
+        <p>highlight.js： ^9.15.6</p>
+        <p>marked：^0.6.</p>
+        <p>jest: "23.6.0",</p>
+        <p>MongoDB Commnunity Edition </p> */}
         {this.state.isLoading ? <LoadingCom /> : ''}
         {this.state.isLoadEnd ? <LoadEndCom /> : ''}
       </div>
