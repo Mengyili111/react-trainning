@@ -1,5 +1,3 @@
-![主页](https://upload-images.jianshu.io/upload_images/12890819-8420689b7238972a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 ## 前言
 
 此 blog 项目是基于 react 全家桶 + Ant Design 。
@@ -7,15 +5,6 @@
 ## 效果
 
 效果图：
-
-- pc 端
-
-![首页](https://upload-images.jianshu.io/upload_images/12890819-4fb796cd5ac5282d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-- 移动端适配
-
-![mobile.gif](https://upload-images.jianshu.io/upload_images/12890819-f97e98dfa9ac76b8.gif?imageMogr2/auto-orient/strip)
-
 
 ## 功能描述
 
