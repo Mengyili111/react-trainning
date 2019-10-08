@@ -84,7 +84,7 @@ class Login extends Component {
   }
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.value, // elegant
     });
   }
   render() {
@@ -122,10 +122,10 @@ class Login extends Component {
             type="primary"
             onClick={this.handleOk}
           >
-            登录
+            Signin
           </Button>
           <Button style={{ width: '100%' }} onClick={this.handleOAuth}>
-            github 授权登录
+            Github Authoriazation
           </Button>
         </div>
       </Modal>
