@@ -1270,10 +1270,10 @@ class Index extends Component {
           <div className="home-body">
             <div className="list">
               <Link className="link" to={`/articles`}>
-                文章
+                Tutorial
               </Link>
               <Link className="link" to={`/project`}>
-                技术栈
+                Tech-Stacks
               </Link>
               <a
                 target="_blank"
@@ -1281,11 +1281,13 @@ class Index extends Component {
                 className="link"
                 href={`https://github.com/charliecha1990/`}
               >
-                github
+                Github
               </a>
             </div>
             {/* <div className="logion"> 加班到天明，学习到昏厥 ！！！ </div> */}
-            <div className="introduce"> 😇React+Node.js😇</div>
+            <div className="introduce"> 
+              <span role='img'>😇React+Node.js😇</span>
+            </div>
           </div>
         </div>
       </div>
