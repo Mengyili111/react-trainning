@@ -47,27 +47,27 @@ class Project extends Component {
     });
 
 
-    this.setState({list:[{
-      _id: '0001',
-      title: 'React-Redux-Express',
-      start_time: '2019-08-08',
-      end_time: '2020-08-08',
-      img: 'https://miro.medium.com/max/3016/0*i1XbVjul86E_CSyf.jpg',
-      content: <div>
-        <p>react： ^16.8.4</p>
-        <p>redux: ^4.0.1</p>
-        <p>antd： ^3.15.0</p>
-        <p>react-router:：^4.3.1</p>
-        <p>webpack： 4.28.3</p>
-        <p>axios：0.18.0</p>
-        <p>highlight.js： ^9.15.6</p>
-        <p>marked：^0.6.</p>
-        <p>jest: "23.6.0",</p>
-        <p>MongoDB Commnunity Edition </p>
-      </div>,
-      isLoading: false,
-      isLoadEnd: true
-    }]})
+    // this.setState({list:[{
+    //   _id: '0001',
+    //   title: 'React-Redux-Express',
+    //   start_time: '2019-08-08',
+    //   end_time: '2020-08-08',
+    //   img: 'https://miro.medium.com/max/3016/0*i1XbVjul86E_CSyf.jpg',
+    //   content: <div>
+    //     <p>react： ^16.8.4</p>
+    //     <p>redux: ^4.0.1</p>
+    //     <p>antd： ^3.15.0</p>
+    //     <p>react-router:：^4.3.1</p>
+    //     <p>webpack： 4.28.3</p>
+    //     <p>axios：0.18.0</p>
+    //     <p>highlight.js： ^9.15.6</p>
+    //     <p>marked：^0.6.</p>
+    //     <p>jest: "23.6.0",</p>
+    //     <p>MongoDB Commnunity Edition </p>
+    //   </div>,
+    //   isLoading: false,
+    //   isLoadEnd: true
+    // }]})
 
 
     https
@@ -79,6 +79,9 @@ class Project extends Component {
         },
       })
       .then(res => {
+
+
+        console.log('projects:',res)
         let num = this.state.pageNum;
         if (res.status === 200 && res.data.code === 0) {
           this.setState({
@@ -132,16 +135,6 @@ class Project extends Component {
     return (
       <div className="left" style={{display: 'center'}}>
         <ul className="project">{list}</ul>
-        {/* <p>react： ^16.8.4</p>
-        <p>redux: ^4.0.1</p>
-        <p>antd： ^3.15.0</p>
-        <p>react-router:：^4.3.1</p>
-        <p>webpack： 4.28.3</p>
-        <p>axios：0.18.0</p>
-        <p>highlight.js： ^9.15.6</p>
-        <p>marked：^0.6.</p>
-        <p>jest: "23.6.0",</p>
-        <p>MongoDB Commnunity Edition </p> */}
         {this.state.isLoading ? <LoadingCom /> : ''}
         {this.state.isLoadEnd ? <LoadEndCom /> : ''}
       </div>

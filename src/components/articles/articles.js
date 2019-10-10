@@ -165,15 +165,7 @@ class Articles extends Component {
         console.error(err);
       });
 
-      this.setState({
-        articlesList: [{
-          _id: '0001',
-          content: 'javascript', 
-          desc:'( For REST API test ) This article helps you to understand what Clouse is in JavaScript',
-          title:'JavaScript Closure',
-          meta: {likes: 1314520, views: 'public', comments: 'I like this article so much'}
-        }]
-      })
+      console.log(this.state.articlesList)
   }
 
   render() {
@@ -192,7 +184,7 @@ class Articles extends Component {
           <a className="wrap-img" href="/" target="_blank">
             <img
               className="img-blur-done"
-              data-src='https://miro.medium.com/max/3016/0*i1XbVjul86E_CSyf.jpg'
+              data-src={item.img_url}
               // {item.img_url}
               data-has-lazy-src="false"
               src={wechat}

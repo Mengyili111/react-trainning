@@ -331,7 +331,7 @@ class Nav extends Component {
                   <Menu.Item key="7">
                     <Link to="/project">
                       <Icon type="database" theme="outlined" />
-                      Stacks
+                      Projects
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="3">

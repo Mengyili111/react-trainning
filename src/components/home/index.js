@@ -1264,7 +1264,7 @@ class Index extends Component {
         <div className="content">
           <div className="home-header">
             <Link className="link" to={`/home`}>
-              <img className="home-logo" src={logo} alt="biaochenxuying logo" />
+              <img className="home-logo" src={logo} alt="CharlieZha logo" />
             </Link>
           </div>
           <div className="home-body">
