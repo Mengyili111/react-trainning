@@ -13,7 +13,7 @@ const App = ({ history }) => {
           {routers.map((r, key) => (
             <Route
               component={r.component}
-              exact={!!r.exact}
+              exact={r.exact}
               key={key}
               path={r.path}
             />

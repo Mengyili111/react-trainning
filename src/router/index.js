@@ -103,6 +103,16 @@ let config = [
       delay: 300,
     }),
   },
+  {
+    name: '404',
+    path: '*',
+    exact: true,
+    component: Loadable({
+      loader: () => import('../components/404/index.js'),
+      loading: loadingComponent,
+      delay: 300,
+    }),
+  }
 ];
 
 export default config;

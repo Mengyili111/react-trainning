@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 class Index extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      openStackModal: false
+    };
   }
 
   componentDidMount() {
@@ -1273,7 +1275,7 @@ class Index extends Component {
                 Tutorial
               </Link>
               <Link className="link" to={`/project`}>
-                Tech-Stacks
+                Projects
               </Link>
               <a
                 target="_blank"

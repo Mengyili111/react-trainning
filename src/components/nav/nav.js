@@ -331,15 +331,15 @@ class Nav extends Component {
                   <Menu.Item key="7">
                     <Link to="/project">
                       <Icon type="database" theme="outlined" />
-                      Projects
+                      Project
                     </Link>
                   </Menu.Item>
-                  <Menu.Item key="3">
+                  {/* <Menu.Item key="3">
                     <Link to="/timeLine">
                       <Icon type="hourglass" theme="outlined" />
                       Roadmap
                     </Link>
-                  </Menu.Item>
+                  </Menu.Item> */}
                   <Menu.Item key="4">
                     <Link to="/message">
                       <Icon type="message" theme="outlined" />
@@ -431,11 +431,6 @@ class Nav extends Component {
                 <Icon type="ordered-list" /> Articles
               </Link>
             </p>
-            {/* <p onClick={this.onClose}>
-              <Link to="/hot">
-                <Icon type="fire" onClick={this.showLoginModal} /> 热门
-              </Link>
-            </p> */}
             <p onClick={this.onClose}>
               <Link to="/archive">
                 <Icon type="project" onClick={this.showLoginModal} /> Archive
@@ -443,7 +438,7 @@ class Nav extends Component {
             </p>
             <p onClick={this.onClose}>
               <Link to="/project">
-                <Icon type="project" onClick={this.showLoginModal} /> Stacks
+                <Icon type="project" onClick={this.showLoginModal} /> Project
               </Link>
             </p>
             {/* <p onClick={this.onClose}>

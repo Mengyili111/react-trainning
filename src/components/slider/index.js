@@ -6,6 +6,8 @@ import { Avatar, message } from 'antd';
 import { Link } from 'react-router-dom';
 import https from '../../utils/https';
 import urls from '../../utils/urls';
+import { Icon } from 'antd';
+
 
 class SliderRight extends Component {
   constructor(props) {
@@ -26,31 +28,31 @@ class SliderRight extends Component {
 
   componentDidMount() {
     this.handleSearch();
-    // this.loadLink();
+    this.loadLink();
   }
-  // loadLink = () => {
-  //   https
-  //     .get(urls.getLinkList, {
-  //       params: {
-  //         type: this.state.type,
-  //         keyword: this.state.keyword,
-  //         pageNum: this.state.pageNum,
-  //         pageSize: this.state.pageSize,
-  //       },
-  //     })
-  //     .then(res => {
-  //       if (res.status === 200 && res.data.code === 0) {
-  //         this.setState({
-  //           linkList: res.data.data.list,
-  //         });
-  //       } else {
-  //         message.error(res.data.message);
-  //       }
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // };
+  loadLink = () => {
+    https
+      .get(urls.getLinkList, {
+        params: {
+          type: this.state.type,
+          keyword: this.state.keyword,
+          pageNum: this.state.pageNum,
+          pageSize: this.state.pageSize,
+        },
+      })
+      .then(res => {
+        if (res.status === 200 && res.data.code === 0) {
+          this.setState({
+            linkList: res.data.data.list,
+          });
+        } else {
+          message.error(res.data.message);
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   handleSearch = () => {
     https
@@ -77,7 +79,7 @@ class SliderRight extends Component {
 
   handleClick(event) {
     this.setState({
-      //   [event.target.name]: event.target.value
+        [event.target.name]: event.target.value
     });
   }
   render() {
@@ -90,40 +92,45 @@ class SliderRight extends Component {
         <span key={item._id}>{item.name}</span>
       </Link>
     ));
-    // const linkChildren = this.state.linkList.map(item => (
-    //   <a
-    //     key={item._id}
-    //     target="_blank"
-    //     rel="noopener noreferrer"
-    //     href={item.url}
-    //   >
-    //     <Icon
-    //       key={item._id}
-    //       type={item.icon}
-    //       theme="outlined"
-    //       style={{ fontSize: '20px', marginRight: '10px' }}
-    //     />
-    //   </a>
-    // ));
+    const linkChildren = this.state.linkList.map(item => (
+      <a
+        key={item._id}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={item.url}
+      >
+        <Icon
+          key={item._id}
+          type={item.icon}
+          theme="outlined"
+          style={{ fontSize: '20px', marginRight: '10px' }}
+        />
+      </a>
+    ));
 
     return (
       <div className="right">
         <Avatar className="right-logo" src={logo} size={130} icon="user" />
         <div className="title">Charlie Zha</div>
         <div className="right-content">
-          {/* <div className="item">
-						<div className="num">123</div>粉丝<Icon type="right" theme="outlined" />
+          <div className="item">
+						Fans
+            <div className="num">123</div>
+            {/* <Icon type="right" theme="outlined" /> */}
 					</div>
 					<div className="item">
-						<div className="num">123</div>文章<Icon type="right" theme="outlined" />
+            Articles
+						<div className="num">2</div>
 					</div>
 					<div className="item">
-						<div className="num">123</div>字数<Icon type="right" theme="outlined" />
+            Total Words
+						<div className="num">123123</div>
 					</div>
 					<div className="item">
-						<div className="num">123</div>收获喜欢<Icon type="right" theme="outlined" />
-          </div> */}
-          {/* <div className="footer">{linkChildren}</div> */}
+            Likes
+						<div className="num">13</div>
+          </div> 
+          <div className="footer">{linkChildren}</div>
         </div>
         <div className="tags">
           <div className="title">Cloud Tags</div>
