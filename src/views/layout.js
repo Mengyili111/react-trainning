@@ -62,6 +62,10 @@ class Layouts extends Component {
           <Index />
         )}
       </div>
+
+
+
+
     );
   }
 }

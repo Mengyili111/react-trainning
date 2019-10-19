@@ -1,6 +1,7 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 
+
 const loadingComponent = ({ error, pastDelay }) => {
   if (error) {
     return <div>Error!</div>;
@@ -10,7 +11,7 @@ const loadingComponent = ({ error, pastDelay }) => {
   } else {
     return null;
   }
-};
+}
 
 let config = [
   {
@@ -34,16 +35,6 @@ let config = [
     }),
   },
   {
-    name: 'hot',
-    path: '/hot',
-    exact: true,
-    component: Loadable({
-      loader: () => import('../components/articles/articles.js'),
-      loading: loadingComponent,
-      delay: 300,
-    }),
-  },
-  {
     name: 'archive',
     path: '/archive',
     exact: true,
@@ -54,31 +45,11 @@ let config = [
     }),
   },
   {
-    name: 'timeLine',
-    path: '/timeLine',
-    exact: true,
-    component: Loadable({
-      loader: () => import('../components/timeLine/timeLine.js'),
-      loading: loadingComponent,
-      delay: 300,
-    }),
-  },
-  {
     name: 'message',
     path: '/message',
     exact: true,
     component: Loadable({
       loader: () => import('../components/message/message.js'),
-      loading: loadingComponent,
-      delay: 300,
-    }),
-  },
-  {
-    name: 'about',
-    path: '/about',
-    exact: true,
-    component: Loadable({
-      loader: () => import('../components/article/article.js'),
       loading: loadingComponent,
       delay: 300,
     }),
@@ -103,16 +74,16 @@ let config = [
       delay: 300,
     }),
   },
-  {
-    name: '404',
-    path: '*',
-    exact: true,
-    component: Loadable({
-      loader: () => import('../components/404/index.js'),
-      loading: loadingComponent,
-      delay: 300,
-    }),
-  }
+  // {
+  //   name: '404',
+  //   path: '/*',
+  //   exact: true,
+  //   component: Loadable({
+  //     loader: () => import('../components/404/index.js'),
+  //     loading: loadingComponent,
+  //     delay: 300,
+  //   }),
+  // }
 ];
 
 export default config;

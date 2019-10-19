@@ -9,7 +9,7 @@ const App = ({ history }) => {
   return (
     <ConnectedRouter history={history}>
       <Switch>
-        <Layouts>
+        <Layouts >
           {routers.map((r, key) => (
             <Route
               component={r.component}
@@ -17,8 +17,8 @@ const App = ({ history }) => {
               key={key}
               path={r.path}
             />
-          ))}
-        </Layouts>
+          ))}       
+        </Layouts >
       </Switch>
     </ConnectedRouter>
   )

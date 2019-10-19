@@ -201,6 +201,7 @@ class Articles extends Component {
             </Link>
             <p className="abstract">{item.desc}</p>
             <div className="meta">
+              {item._id}
               <Link
                 rel="noopener noreferrer"
                 to={`/articleDetail?article_id=${item._id}`}
