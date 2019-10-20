@@ -19,6 +19,7 @@ export const urls = {
 
   getLinkList: 'getLinkList',
 
+
   getTagList: 'getTagList',
 
   getCategoryList: 'getCategoryList',
@@ -28,6 +29,8 @@ export const urls = {
 
   getProjectList: 'getProjectList',
   getProjectDetail: 'getProjectDetail',
+
+  getArchive:'getArchive'
 };
 
 export default urls;
